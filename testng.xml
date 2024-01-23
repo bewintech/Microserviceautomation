@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MicroserviceTestSuite">
+    <test name="YourTest">
+        <classes>
+            <class name="" />
+            <class name="" />
+            <!-- Add more classes as needed -->
+        </classes>
+    </test>
+
+    <!-- Additional test configurations (optional) -->
+    <parameter name="browser" value="chrome" />
+    <parameter name="environment" value="qa" />
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
+        <!-- Add more listeners or configurations as needed -->
+    </listeners>
+</suite>

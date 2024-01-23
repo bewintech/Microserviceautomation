@@ -1,4 +1,4 @@
-package org.automation.pom.factory;
+package org.systech.compliance.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

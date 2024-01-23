@@ -1,6 +1,6 @@
-package org.automation.pom.base;
+package org.systech.compliance.base;
 
-import org.automation.pom.factory.DriverManager;
+import org.systech.compliance.factory.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

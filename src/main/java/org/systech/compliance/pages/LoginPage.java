@@ -1,21 +1,41 @@
 package org.systech.compliance.pages;
 
-import org.systech.compliance.base.BasePage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
-public class LoginPage extends BasePage {
-    private final By username = By.name("user.username");
-    private final By password = By.name("user.password");
-    private final By loginBtn = By.tagName("Login");
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.systech.compliance.base.BaseClass;
+
+
+public class LoginPage extends BaseClass {
+
+    @FindBy(name = "user.username")
+    WebElement myUserName;
+    @FindBy(name = "user.password")
+    WebElement myPassword;
+    @FindBy(xpath = "//span[text()=\"Login\"]")
+    WebElement myloginButton;
 
     public LoginPage(WebDriver driver) {
-        super(driver);
+
+        PageFactory.initElements(driver, this);
+
+
     }
 
-    public void userLogin(String txt){
-        driver.findElement(username).sendKeys(txt);
-        driver.findElement(password).sendKeys(txt);
-        driver.findElement(loginBtn).click();
+    public WebElement myuserName() {
+
+        return ehandler.findE(myUserName);
     }
+
+    public WebElement myPasswordMethod()  {
+        return ehandler.findE(myPassword);
+
+    }
+
+    public WebElement myLoginButton() {
+        return ehandler.findE(myloginButton);
+    }
+
 }

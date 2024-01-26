@@ -10,35 +10,39 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 public class ReadXlsxData {
     @DataProvider(name = "login")
-    public Object[][] getData(Method m) throws IOException {
-//        String excelSheetName = "login";
-        String separator = File.separator;
-        String excelSheetName = m.getName();
-        String filePath = "src"+separator+"test"+separator+"resources"+separator+"TestData"+separator+"tData.xlsx";
-        System.out.println(excelSheetName);
-        File f = new File(filePath);
-        FileInputStream fileInputStream = new FileInputStream(f);
-        Workbook workbook = WorkbookFactory.create(fileInputStream);
-        Sheet sheetName = workbook.getSheet(excelSheetName);
-        System.out.println(sheetName);
+    public Object[][] getData(Method m) {
+        String excelSheetName = "Sheet1"; // Update with your actual sheet name
+        String filePath = "src/main/resources/TestData/logindata.xlsx";
 
-        int totalRows = sheetName.getLastRowNum();
-//        System.out.println(totalRows);
-        Row rowCells = sheetName.getRow(0);
-        int totalCols = rowCells.getLastCellNum();
-//        System.out.println(totalCols);
+        try (FileInputStream fileInputStream = new FileInputStream(filePath);
+             Workbook workbook = WorkbookFactory.create(fileInputStream)) {
 
+            Sheet sheetName = workbook.getSheet(excelSheetName);
 
-        DataFormatter format = new DataFormatter();
-        String testData[][] = new String[totalRows][totalCols];
-        for (int i = 1; i<=totalRows; i++){
-            for (int j=0; j<totalCols; j++){
-                testData[i-1][j] = format.formatCellValue(sheetName.getRow(i).getCell(j));
-//                System.out.println(testData[i-1][j]);
+            if (sheetName == null) {
+                throw new RuntimeException("Sheet with name '" + excelSheetName + "' not found.");
             }
-        }
 
-        return testData;
+            int totalRows = sheetName.getLastRowNum() + 1;
+            Row headerRow = sheetName.getRow(0);
+            int totalCols = headerRow.getLastCellNum();
+
+            DataFormatter format = new DataFormatter();
+            String testData[][] = new String[totalRows - 1][totalCols];
+
+            for (int i = 1; i < totalRows; i++) {
+                Row currentRow = sheetName.getRow(i);
+                for (int j = 0; j < totalCols; j++) {
+                    testData[i - 1][j] = format.formatCellValue(currentRow.getCell(j));
+                }
+            }
+
+            return testData;
+
+        } catch (IOException e) {
+            throw new RuntimeException("Error reading Excel file: " + e.getMessage(), e);
+        }
     }
+
 
 }

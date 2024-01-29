@@ -1,4 +1,4 @@
-package org.systech.compliance.pages;
+package org.systech.compliance.pageobjects;
 
 
 import org.openqa.selenium.WebDriver;

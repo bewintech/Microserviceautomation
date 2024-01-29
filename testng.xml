@@ -2,8 +2,8 @@
 <suite name="MicroserviceTestSuite">
     <test name="YourTest">
         <classes>
-            <class name="" />
-            <class name="" />
+            <class name="tests.LoginTest" />
+            <class name="tests.CreateAnInspectionTest" />
             <!-- Add more classes as needed -->
         </classes>
     </test>

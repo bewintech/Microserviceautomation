@@ -18,7 +18,7 @@ public  void createAnInspect() throws InterruptedException{
    createAnInspection.getInspectionManagement().click();
     createAnInspection.getOperations().click();
     createAnInspection.getCreateInspection().click();
-    createAnInspection.getInspectionTitle().sendKeys("Automation Inspection Test");
+    createAnInspection.getInspectionTitle().sendKeys("Automation Inspection Tests");
     actions.comboDropDown(createAnInspection.getInspectorType(), "Routine Inspection");
     createAnInspection.getFindEmployer().click();
     createAnInspection.getSelectEmployer().click();

@@ -22,13 +22,13 @@ public class CreateAnInspection extends BaseClass {
     WebElement inspectorType;
     @FindBy(xpath = "(//span[@data-ref='btnInnerEl'][contains(.,'Find')])[1]")
     WebElement findEmployer;
-    @FindBy(xpath = "(//div[@class='x-grid-cell-inner '][contains(.,'Active')])[32]")
+    @FindBy(xpath = "//div[@class='x-grid-cell-inner '][contains(.,'Twiga foods')]")
     WebElement selectEmployer;
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Apply Selected')]")
     WebElement applySelectedEmployer;
     @FindBy(xpath = "(//span[@data-ref='btnInnerEl'][contains(.,'Find')])[2]")
     WebElement findInspector;
-    @FindBy(xpath = "(//div[contains(@class,'x-grid-cell-inner x-grid-checkcolumn-cell-inner')])[85]")
+    @FindBy(xpath = "//div[@class='x-grid-cell-inner '][contains(.,'Winfred Winnie')]")
     WebElement selectInspector;
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Apply Selected')]")
     WebElement applySelectedInspector;

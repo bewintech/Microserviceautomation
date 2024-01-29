@@ -79,21 +79,21 @@ public class BaseClass {
     }
 
 
-    @BeforeClass
-    public void loadUrl(){
-        try{
-//            driver.get("http://localhost:8080/Xe/");
-            driver.get(prop.getProperty("url"));
-            System.out.println(prop.getProperty("url"));
+//    @BeforeClass
+//    public void loadUrl(){
+//        try{
+////            driver.get("http://localhost:8080/Xe/");
+//            driver.get(prop.getProperty("url"));
+//            System.out.println(prop.getProperty("url"));
+//
+//        }catch(Exception e){
+//            logger.error(e.getMessage());
+//        }
+//    }
 
-        }catch(Exception e){
-            logger.error(e.getMessage());
-        }
-    }
 
-
-    @AfterSuite
-    public void tearDown() {
-//        driver.quit();
-    }
+//    @AfterSuite
+//    public void tearDown() {
+//      driver.quit();
+//    }
 }

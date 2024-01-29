@@ -1,0 +1,1 @@
+{"uuid":"a286a327-7be6-481e-8ffa-7841aa2806f2","name":"tests.CreateAnInspectionTest","children":["2e5cfce5-115b-4ece-bc72-8a536e12a8d2"],"befores":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1706555798832,"stop":1706555798832}],"afters":[],"start":1706555798167,"stop":1706555798881}

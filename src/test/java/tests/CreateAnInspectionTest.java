@@ -2,7 +2,6 @@ package tests;
 
 import org.systech.compliance.actions.ActionFile;
 import org.systech.compliance.base.BaseClass;
-import org.systech.compliance.pageobjects.HomePage;
 import org.systech.compliance.pageobjects.inspections.CreateAnInspection;
 import org.testng.annotations.Test;
 
@@ -13,13 +12,13 @@ public class CreateAnInspectionTest extends BaseClass {
     @Test (priority = 1)
 public  void createAnInspect() throws InterruptedException{
     CreateAnInspection createAnInspection = new CreateAnInspection(driver);
-        HomePage homePage = new HomePage(driver);
+//        HomePage homePage = new HomePage(driver);
     ActionFile actions = new ActionFile();
 
-    homePage.getInspectionManagement().click();
+   createAnInspection.getInspectionManagement().click();
     createAnInspection.getOperations().click();
     createAnInspection.getCreateInspection().click();
-    createAnInspection.getInspectionTitle().sendKeys("Automation Inspection");
+    createAnInspection.getInspectionTitle().sendKeys("Automation Inspection Test");
     actions.comboDropDown(createAnInspection.getInspectorType(), "Routine Inspection");
     createAnInspection.getFindEmployer().click();
     createAnInspection.getSelectEmployer().click();

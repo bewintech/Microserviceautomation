@@ -22,8 +22,9 @@ public class CreateAnInspection extends BaseClass {
     WebElement inspectorType;
     @FindBy(xpath = "(//span[@data-ref='btnInnerEl'][contains(.,'Find')])[1]")
     WebElement findEmployer;
-    @FindBy(xpath = "//div[@class='x-grid-cell-inner '][contains(.,'Twiga foods')]")
+    @FindBy(xpath = "(//div[contains(.,'Active')])[40]")
     WebElement selectEmployer;
+//            "//div[contains(text(), 'Duka')]")
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Apply Selected')]")
     WebElement applySelectedEmployer;
     @FindBy(xpath = "(//span[@data-ref='btnInnerEl'][contains(.,'Find')])[2]")
@@ -48,8 +49,8 @@ public class CreateAnInspection extends BaseClass {
     public WebElement getInspectionTitle(){return ehandler.findClickable(inspectionTitle);}
     public WebElement getInspectorType(){return ehandler.findE(inspectorType);}
     public WebElement getFindEmployer(){return ehandler.findClickable(findEmployer);}
-    public WebElement getSelectEmployer(){return ehandler.findClickable(selectEmployer);}
-    public WebElement getApplySelectedEmployer(){return ehandler.findClickable(applySelectedEmployer);}
+    public WebElement getSelectEmployer(){return ehandler.findE(selectEmployer);}
+    public WebElement getApplySelectedEmployer(){return ehandler.findE(applySelectedEmployer);}
     public WebElement getFindInspector(){return ehandler.findClickable(findInspector);}
     public WebElement getSelectInspector(){return ehandler.findClickable(selectInspector);}
     public WebElement getApplySelectedInspector(){return ehandler.findClickable(applySelectedInspector);}

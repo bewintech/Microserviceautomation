@@ -1,9 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="MicroserviceTestSuite">
-    <test name="YourTest">
+    <test name="YourTest" preserve-order="true">
         <classes>
             <class name="tests.LoginTest" />
-            <class name="tests.CreateAnInspectionTest" />
+            <class name="tests.inspectiontests.InspectionApprovalTest" />
+<!--            <class name="tests.inspectiontests.CloseInspectionTest"></class>-->
+<!--            <class name="tests.inspectiontests.HitTheStreetSurveyTest"></class>-->
+            <class name="tests.inspectiontests.RemoveInspectionTest"></class>
+
             <!-- Add more classes as needed -->
         </classes>
     </test>

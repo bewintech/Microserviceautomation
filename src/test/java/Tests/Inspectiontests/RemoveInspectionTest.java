@@ -10,6 +10,8 @@ import org.testng.annotations.Test;
 public class RemoveInspectionTest extends BaseClass {
     @Test (priority = 6)
     public void removeInspection() throws InterruptedException{
+        driver.get(prop.getProperty("url"));
+
         RemoveInspection removeInspection = new RemoveInspection(driver);
         removeInspection.getInspectionManagement().click();
         removeInspection.getSelectInspection().click();

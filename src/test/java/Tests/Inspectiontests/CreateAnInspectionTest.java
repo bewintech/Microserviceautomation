@@ -39,7 +39,6 @@ public class CreateAnInspectionTest extends BaseClass {
             // For example, take a screenshot or add other corrective actions
 
             // Refresh the browser
-            Thread.sleep(4000);
             refreshBrowser();
         }
     }

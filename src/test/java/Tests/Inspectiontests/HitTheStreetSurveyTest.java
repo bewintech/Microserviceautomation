@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 public class HitTheStreetSurveyTest extends BaseClass {
     @Test (priority = 4)
     public void hitTheSurvey() throws InterruptedException{
+        driver.get(prop.getProperty("url"));
+
         HitTheStreetSurvey hitTheSurvey = new HitTheStreetSurvey(driver);
         ActionFile actions  = new ActionFile();
         hitTheSurvey.getInspectionManagement().click();

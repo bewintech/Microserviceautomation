@@ -9,7 +9,9 @@ import org.testng.annotations.Test;
  */
 public class InspectionApprovalTest extends BaseClass {
     @Test (priority = 2)
-    public void inspectionApprovalTest() throws InterruptedException{
+    public void inspectionApprovalTest() throws InterruptedException {
+        driver.get(prop.getProperty("url"));
+
         InspectionApproval inspectionApproval = new InspectionApproval(driver);
         inspectionApproval.getInspectionManagement().click();
         inspectionApproval.getSelectInspection().click();
@@ -20,7 +22,16 @@ public class InspectionApprovalTest extends BaseClass {
         inspectionApproval.getCertification().click();
         inspectionApproval.getApproveInspection().click();
         inspectionApproval.getCertify().click();
+        Thread.sleep(6000);
+
         driver.navigate().refresh();
+        refreshBrowser();
 
     }
+        private void refreshBrowser() {
+            // Implement browser refresh logic here
+            driver.navigate().refresh();
+        }
+
+
 }

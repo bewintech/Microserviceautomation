@@ -4,11 +4,13 @@
         <classes>
             <class name="Tests.LoginTest" />
 <!--            <class name="Tests.Inspectiontests.CreateAnInspectionTest"></class>-->
-            <class name="Tests.Inspectiontests.InspectionApprovalTest" />
+<!--            <class name="Tests.Inspectiontests.InspectionApprovalTest" />-->
 <!--            <class name="Tests.Inspectiontests.CloseInspectionTest"></class>-->
 <!--            <class name="Tests.Inspectiontests.HitTheStreetSurveyTest"></class>-->
 <!--            <class name="Tests.Inspectiontests.RemoveInspectionTest"></class>-->
 <!--            <class name="Tests.InterestandPenaltyManagementTests.CreateWaiverTest"></class>-->
+<!--            <class name="Tests.InterestandPenaltyManagementTests.CalculateInterestRatesTest"></class>-->
+            <class name="Tests.InterestandPenaltyManagementTests.IssueSDLTest"></class>
 
             <!-- Add more classes as needed -->
         </classes>

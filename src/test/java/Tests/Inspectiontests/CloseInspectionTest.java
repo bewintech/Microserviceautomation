@@ -8,8 +8,9 @@ import org.testng.annotations.Test;
  * @author Winfred
  */
 public class CloseInspectionTest extends BaseClass {
-    @Test (priority = 4)
+    @Test (priority = 5)
     public void closeInspection() throws InterruptedException{
+        driver.get(prop.getProperty("url"));
         CloseInspection closeInspection = new CloseInspection(driver);
         closeInspection.getInspectionManagement().click();
         closeInspection.getSelectInspection().click();

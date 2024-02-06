@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 public class CreateWaiverTest extends BaseClass {
     @Test (priority = 7)
     public void createWaiverTest() throws InterruptedException{
+        driver.get(prop.getProperty("url"));
+
         CreateWaiverRate  createWaiverRate = new CreateWaiverRate(driver);
         ActionFile actions = new ActionFile();
         createWaiverRate.getInterestManagement().click();

@@ -1,5 +1,6 @@
 package Tests.Inspectiontests;
 
+import Tests.LoginTest;
 import org.systech.compliance.actions.ActionFile;
 import org.systech.compliance.base.BaseClass;
 import org.systech.compliance.pageobjects.inspections.CreateAnInspection;
@@ -8,7 +9,7 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class CreateAnInspectionTest extends BaseClass {
+public class CreateAnInspectionTest extends LoginTest {
     @Test(priority = 1)
     public void createAnInspect() throws InterruptedException {
         CreateAnInspection createAnInspection = new CreateAnInspection(driver);
@@ -28,6 +29,7 @@ public class CreateAnInspectionTest extends BaseClass {
             createAnInspection.getApplySelectedInspector().click();
             createAnInspection.getDateOfVisit().sendKeys(actions.generateDateToday());
             createAnInspection.getInspectionDescription().sendKeys("We are automating this Process");
+            Thread.sleep(4000);
             createAnInspection.getSaveInspection().click();
 
             // Continue with the remaining test steps...
@@ -43,8 +45,4 @@ public class CreateAnInspectionTest extends BaseClass {
         }
     }
 
-    private void refreshBrowser() {
-        // Implement browser refresh logic here
-        driver.navigate().refresh();
     }
-}

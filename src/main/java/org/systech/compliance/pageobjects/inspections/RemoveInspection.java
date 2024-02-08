@@ -12,7 +12,7 @@ import org.systech.compliance.base.BaseClass;
 public class RemoveInspection extends BaseClass {
     @FindBy(xpath = "//div[@class='x-treelist-item-text'][contains(.,'Surveys/Inspections Management')]")
     WebElement inspectionManagement;
-    @FindBy(xpath = "(//div[@class='x-grid-cell-inner '][contains(.,'Automation Inspection')])[1]")
+    @FindBy(xpath = "(//div[@class='x-grid-cell-inner '][contains(.,'Automation Inspection')])[5]")
     WebElement selectInspection;
     @FindBy(xpath = "(//span[@data-ref='btnInnerEl'][contains(.,'Operations')])[1]")
     WebElement operations;

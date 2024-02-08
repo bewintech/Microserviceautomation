@@ -1,5 +1,6 @@
 package Tests.Inspectiontests;
 
+import Tests.LoginTest;
 import org.systech.compliance.base.BaseClass;
 import org.systech.compliance.pageobjects.inspections.InspectionApproval;
 import org.testng.annotations.Test;
@@ -7,10 +8,9 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class InspectionApprovalTest extends BaseClass {
-    @Test (priority = 2)
+public class InspectionApprovalTest extends LoginTest {
+    @Test
     public void inspectionApprovalTest() throws InterruptedException {
-        driver.get(prop.getProperty("url"));
 
         InspectionApproval inspectionApproval = new InspectionApproval(driver);
         inspectionApproval.getInspectionManagement().click();
@@ -24,14 +24,9 @@ public class InspectionApprovalTest extends BaseClass {
         inspectionApproval.getCertify().click();
         Thread.sleep(6000);
 
-        driver.navigate().refresh();
         refreshBrowser();
 
     }
-        private void refreshBrowser() {
-            // Implement browser refresh logic here
-            driver.navigate().refresh();
-        }
 
 
 }

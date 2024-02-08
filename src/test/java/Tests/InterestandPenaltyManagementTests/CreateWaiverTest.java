@@ -9,9 +9,8 @@ import org.testng.annotations.Test;
  * @author Winfred
  */
 public class CreateWaiverTest extends BaseClass {
-    @Test (priority = 7)
+    @Test (priority = 1)
     public void createWaiverTest() throws InterruptedException{
-        driver.get(prop.getProperty("url"));
 
         CreateWaiverRate  createWaiverRate = new CreateWaiverRate(driver);
         ActionFile actions = new ActionFile();
@@ -23,6 +22,7 @@ public class CreateWaiverTest extends BaseClass {
         createWaiverRate.getPenaltyToWave().sendKeys("25");
         createWaiverRate.getEffectiveDate().sendKeys(actions.generateDateToday());
         createWaiverRate.getExpiryDate().sendKeys("06/06/2024");
+        Thread.sleep(4000);
         createWaiverRate.getSaveRate().click();
 
     }

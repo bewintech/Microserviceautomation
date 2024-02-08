@@ -1,5 +1,6 @@
 package Tests.Inspectiontests;
 
+import Tests.LoginTest;
 import org.systech.compliance.base.BaseClass;
 import org.systech.compliance.pageobjects.inspections.CloseInspection;
 import org.testng.annotations.Test;
@@ -7,7 +8,7 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class CloseInspectionTest extends BaseClass {
+public class CloseInspectionTest extends LoginTest {
     @Test (priority = 5)
     public void closeInspection() throws InterruptedException{
         driver.get(prop.getProperty("url"));

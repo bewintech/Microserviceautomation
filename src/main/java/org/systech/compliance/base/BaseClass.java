@@ -9,13 +9,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.systech.compliance.pageobjects.LoginPage;
 import org.systech.compliance.utils.DataProviders.ReadFile;
+import org.systech.compliance.utils.DataProviders.ReadXlsxData;
 import org.systech.compliance.utils.ExceptionHandlerFile;
 import org.systech.compliance.utils.Methods;
 import org.systech.compliance.utils.WaitWebElement;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -74,12 +77,29 @@ public class BaseClass {
         } else {
             throw new IllegalArgumentException("Unsupported browser: " + browserName);
         }
+//        login("Wamuyu","Admin@123");
         System.out.println("before test");
         logger.info("before test");
     }
+    public void refreshBrowser() {
+        // Implement browser refresh logic here
+        driver.navigate().refresh();
+    }
 
 
-//    @BeforeClass
+
+//   @BeforeClass
+//    @Test(dataProvider = "login", dataProviderClass = ReadXlsxData .class, priority = 0)
+
+//    public void login(String uname, String password) throws InterruptedException {
+//        driver.get(prop.getProperty("url"));
+//        LoginPage loginPage = new LoginPage(driver);
+//        loginPage.myuserName().sendKeys(uname);
+//        loginPage.myPasswordMethod().sendKeys(password);
+//
+//        loginPage.myLoginButton().click();
+//
+//    }
 //    public void loadUrl(){
 //        try{
 ////            driver.get("http://localhost:8080/Xe/");

@@ -54,7 +54,7 @@ public class ExceptionHandlerFile extends BaseClass {
         // Add more specific exception handling logic as needed
     }
 
-    private void refreshBrowser() {
+    public void refreshBrowser() {
         // Implement browser refresh logic here
         WebDriver driver = new ChromeDriver();  // Assuming getDriver() is a method in BaseClass that returns the WebDriver instance
         if (driver != null) {

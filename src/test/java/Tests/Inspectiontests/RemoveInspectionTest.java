@@ -1,5 +1,6 @@
 package Tests.Inspectiontests;
 
+import Tests.LoginTest;
 import org.systech.compliance.base.BaseClass;
 import org.systech.compliance.pageobjects.inspections.RemoveInspection;
 import org.testng.annotations.Test;
@@ -7,10 +8,9 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class RemoveInspectionTest extends BaseClass {
-    @Test (priority = 6)
+public class RemoveInspectionTest extends LoginTest {
+    @Test (priority = 1)
     public void removeInspection() throws InterruptedException{
-        driver.get(prop.getProperty("url"));
 
         RemoveInspection removeInspection = new RemoveInspection(driver);
         removeInspection.getInspectionManagement().click();
@@ -18,5 +18,7 @@ public class RemoveInspectionTest extends BaseClass {
         removeInspection.getOperations().click();
         removeInspection.getCloseCampaign().click();
         removeInspection.getConfirmClose().click();
+        driver.navigate().refresh();
+
     }
 }

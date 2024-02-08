@@ -18,6 +18,8 @@ public class CalculateInterestRates extends BaseClass {
     WebElement month;
     @FindBy(xpath = "//input[contains(@name,'year')]")
     WebElement year;
+    @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Filter')]")
+    WebElement filter;
     @FindBy(xpath = "(//span[contains(.,'Active')])[1]")
     WebElement selectBatch;
     @FindBy(xpath = "(//b[contains(.,'calculate interest')])[1]")
@@ -34,6 +36,8 @@ public class CalculateInterestRates extends BaseClass {
     public WebElement getYear(){return ehandler.findClickable(year);}
     public WebElement getCalculateInterest(){return ehandler.findClickable(calculateInterest);}
     public WebElement getInterestcalcution(){return ehandler.findClickable(interestcalcution);}
+    public WebElement getFilter(){return ehandler.findClickable(filter);}
+
 
 
 }

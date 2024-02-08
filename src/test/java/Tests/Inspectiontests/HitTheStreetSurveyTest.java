@@ -1,5 +1,6 @@
 package Tests.Inspectiontests;
 
+import Tests.LoginTest;
 import org.systech.compliance.actions.ActionFile;
 import org.systech.compliance.base.BaseClass;
 import org.systech.compliance.pageobjects.inspections.HitTheStreetSurvey;
@@ -8,10 +9,9 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class HitTheStreetSurveyTest extends BaseClass {
+public class HitTheStreetSurveyTest extends LoginTest {
     @Test (priority = 4)
     public void hitTheSurvey() throws InterruptedException{
-        driver.get(prop.getProperty("url"));
 
         HitTheStreetSurvey hitTheSurvey = new HitTheStreetSurvey(driver);
         ActionFile actions  = new ActionFile();
@@ -25,6 +25,8 @@ public class HitTheStreetSurveyTest extends BaseClass {
         hitTheSurvey.getDateFrom().sendKeys(actions.generateDateToday());
         hitTheSurvey.getDateTo().sendKeys(actions.generateDateToday());
         hitTheSurvey.getComments().sendKeys("We are testing");
+        Thread.sleep(4000);
+
         hitTheSurvey.getSaveSurvey().click();
         driver.navigate().refresh();
 

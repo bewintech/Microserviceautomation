@@ -41,7 +41,6 @@
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="edb postgres Data Source" uuid="26e554ee-ccb9-4385-a65d-4bca909303a2">
-      <driver-ref>java.sql.Driver</driver-ref>
       <synchronize>true</synchronize>
       <configured-by-url>true</configured-by-url>
       <jdbc-driver>com.edb.Driver</jdbc-driver>
@@ -52,7 +51,6 @@
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="edb postgres Data Source - nassit@192.168.200.219" uuid="855ddf98-f0e4-4064-bcf6-c9816445e81a">
-      <driver-ref>java.sql.Driver</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.edb.Driver</jdbc-driver>
       <jdbc-url>jdbc:edb://192.168.200.219:5444/nassit</jdbc-url>

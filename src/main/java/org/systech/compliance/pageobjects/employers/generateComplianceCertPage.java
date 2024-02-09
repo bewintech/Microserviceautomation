@@ -13,7 +13,7 @@ public class generateComplianceCertPage extends BaseClass {
 //    @FindBy(xpath = "//label[contains(@for,'employerSearchTxt-inputEl')]")
 //    WebElement searchName;
 
-    @FindBy(xpath = "//div[@class='x-grid-cell-inner '][contains(.,'Duka')]")
+    @FindBy(xpath = "//div[@class='x-grid-cell-inner '][contains(.,'Kamotho and sons')]")
     WebElement selectEmployer;
 
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Show Compliance BreakDown')]")

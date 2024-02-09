@@ -12,9 +12,9 @@ import org.systech.compliance.base.BaseClass;
 public class InspectionApproval extends BaseClass {
     @FindBy(xpath = "//div[@class='x-treelist-item-text'][contains(.,'Surveys/Inspections Management')]")
     WebElement inspectionManagement;
-    @FindBy(xpath = "(//div[@class='x-grid-cell-inner '][contains(.,'Automation Inspection')])[1]")
+    @FindBy(xpath = "(//div[@class='x-grid-cell-inner '][contains(.,'Automation Inspection Tests')])[4]")
     WebElement selectInspection;
-    @FindBy(xpath = "(//span[@data-ref='btnInnerEl'][contains(.,'Certification')])[1]")
+    @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Certification')]")
     WebElement certification;
     @FindBy(xpath = "//b[contains(.,'Certify')]")
     WebElement certifyInspection;

@@ -8,9 +8,10 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class RemoveInspectionTest extends LoginTest {
-    @Test (priority = 1)
+public class RemoveInspectionTest extends BaseClass {
+    @Test (priority = 4)
     public void removeInspection() throws InterruptedException{
+        driver.get(prop.getProperty("url"));
 
         RemoveInspection removeInspection = new RemoveInspection(driver);
         removeInspection.getInspectionManagement().click();
@@ -18,6 +19,8 @@ public class RemoveInspectionTest extends LoginTest {
         removeInspection.getOperations().click();
         removeInspection.getCloseCampaign().click();
         removeInspection.getConfirmClose().click();
+        Thread.sleep(2000);
+
         driver.navigate().refresh();
 
     }

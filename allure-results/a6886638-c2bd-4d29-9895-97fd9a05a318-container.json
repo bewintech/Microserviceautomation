@@ -1,1 +1,0 @@
-{"uuid":"a6886638-c2bd-4d29-9895-97fd9a05a318","name":"MicroserviceTestSuite","children":["217a045c-3dea-4065-acf9-06ac689a3134"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1706734318258,"stop":1706734321171}],"afters":[],"start":1706734318222,"stop":1706734335201}

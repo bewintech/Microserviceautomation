@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class CreateAnInspectionTest extends LoginTest {
+public class CreateAnInspectionTest extends BaseClass {
     @Test(priority = 1)
     public void createAnInspect() throws InterruptedException {
         CreateAnInspection createAnInspection = new CreateAnInspection(driver);

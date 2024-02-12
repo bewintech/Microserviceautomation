@@ -9,8 +9,9 @@ import org.testng.annotations.Test;
  * @author Winfred
  */
 public class CalculateInterestRatesTest extends BaseClass {
-    @Test(priority = 2)
+    @Test(priority = 6)
     public void interestCalculation() throws InterruptedException{
+        driver.get(prop.getProperty("url"));
 
         CalculateInterestRates interestCalculation = new CalculateInterestRates(driver);
         ActionFile actions = new ActionFile();
@@ -22,6 +23,8 @@ public class CalculateInterestRatesTest extends BaseClass {
         interestCalculation.getSelectBatch().click();
         interestCalculation.getCalculateInterest().click();
         interestCalculation.getInterestcalcution().click();
+        Thread.sleep(2000);
+
 
 
     }

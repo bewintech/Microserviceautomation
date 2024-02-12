@@ -9,9 +9,10 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class HitTheStreetSurveyTest extends LoginTest {
-    @Test (priority = 4)
+public class HitTheStreetSurveyTest extends BaseClass {
+    @Test (priority = 5)
     public void hitTheSurvey() throws InterruptedException{
+        driver.get(prop.getProperty("url"));
 
         HitTheStreetSurvey hitTheSurvey = new HitTheStreetSurvey(driver);
         ActionFile actions  = new ActionFile();
@@ -28,6 +29,8 @@ public class HitTheStreetSurveyTest extends LoginTest {
         Thread.sleep(4000);
 
         hitTheSurvey.getSaveSurvey().click();
+        Thread.sleep(2000);
+
         driver.navigate().refresh();
 
 

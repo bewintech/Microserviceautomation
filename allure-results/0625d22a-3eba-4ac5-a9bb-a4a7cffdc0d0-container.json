@@ -1,1 +1,0 @@
-{"uuid":"0625d22a-3eba-4ac5-a9bb-a4a7cffdc0d0","name":"tests.CreateAnInspectionTest","children":["a519fd82-b940-4e05-a710-80c67c12a903"],"befores":[{"name":"loadUrl","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1706555639709,"stop":1706555640749}],"afters":[],"start":1706555629698,"stop":1706555640776}

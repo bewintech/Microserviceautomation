@@ -10,9 +10,10 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class IssueSDLTest extends LoginTest {
-    @Test(priority = 3)
+public class IssueSDLTest extends BaseClass {
+    @Test(priority = 8)
     public void issueSDL() throws InterruptedException{
+        driver.get(prop.getProperty("url"));
 
         IssueSDL issueSDL = new IssueSDL(driver);
         CalculateInterestRates rates = new CalculateInterestRates(driver);
@@ -20,11 +21,15 @@ public class IssueSDLTest extends LoginTest {
         rates.getInterestManagement().click();
         rates.getInterest().click();
         actions.comboDropDown(rates.getMonth(), "November");
+        actions.comboDropDown(rates.getYear(),"2023");
+        rates.getFilter().click();
         Thread.sleep(4000);
        issueSDL.getSelectBatch().click();
         issueSDL.getReducer().click();
 
         issueSDL.getGenerateSDL().click();
+        Thread.sleep(2000);
+
 
     }
 }

@@ -8,9 +8,10 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class InspectionApprovalTest extends LoginTest {
-    @Test
+public class InspectionApprovalTest extends BaseClass {
+    @Test(priority = 2)
     public void inspectionApprovalTest() throws InterruptedException {
+        driver.get(prop.getProperty("url"));
 
         InspectionApproval inspectionApproval = new InspectionApproval(driver);
         inspectionApproval.getInspectionManagement().click();

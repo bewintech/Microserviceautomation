@@ -17,7 +17,7 @@ public class GenerateHDLTest extends BaseClass {
         certifySDL.getsDL().click();
         certifySDL.getSelectSDL().click();
         generateHDL.getEscalateHDL().click();
-        generateHDL.getConfirmEscalate().click(); .
+        generateHDL.getConfirmEscalate().click();
         generateHDL.getEscalateSDLBatch().click();
 
 

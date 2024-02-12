@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 public class GenerateHDLTest extends BaseClass {
     @Test(priority = 11)
     public void generateHDL() throws InterruptedException{
+        driver.get(prop.getProperty("url"));
+
         CertifySDL certifySDL = new CertifySDL(driver);
         GenerateHDL generateHDL = new GenerateHDL(driver);
         certifySDL.getDemandLettersManagement().click();

@@ -1,5 +1,6 @@
 package tests.employersManagement;
 
+import Tests.LoginTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.systech.compliance.actions.ActionFile;
@@ -7,7 +8,7 @@ import org.systech.compliance.base.BaseClass;
 import org.systech.compliance.pageobjects.employers.generateComplianceCertPage;
 import org.testng.annotations.Test;
 
-public class generateComplianceCertTest extends Tests.LoginTest {
+public class generateComplianceCertTest extends LoginTest {
     @Test(priority = 1)
     public void generateComplianceCert() throws InterruptedException{
         generateComplianceCertPage generateComplianceCert = new generateComplianceCertPage(driver);

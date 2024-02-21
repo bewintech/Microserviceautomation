@@ -22,6 +22,8 @@ public class CloseInspection extends BaseClass {
     WebElement confirmClose;
     @FindBy(xpath = "(//span[contains(.,'Closed')])[4]")
     WebElement assertstatus;
+    @FindBy(xpath = "//div[contains(@id,'header-title-textEl')][@data-ref='textEl'][contains(.,'Success')]")
+    WebElement toastMessage;
     public CloseInspection(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
@@ -31,6 +33,7 @@ public class CloseInspection extends BaseClass {
     public WebElement getOperations(){return ehandler.findClickable(operations);}
     public WebElement getCloseCampaign(){return ehandler.findClickable(closeCampaign);}
     public WebElement getConfirmClose(){return ehandler.findClickable(confirmClose);}
+    public WebElement getToastMessage() {return ehandler.findE(toastMessage);}
     public WebElement getAssertstatus(){return ehandler.findClickable(assertstatus);}
 
 

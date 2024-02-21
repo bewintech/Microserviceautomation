@@ -39,6 +39,8 @@ public class CreateAnInspection extends BaseClass {
     WebElement inspectionDescription;
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Save')]")
     WebElement saveInspection;
+    @FindBy(xpath = "//div[contains(@id,'header-title-textEl')][@data-ref='textEl'][contains(.,'Success!')]")
+    WebElement toastMessage;
     public CreateAnInspection(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
@@ -57,5 +59,7 @@ public class CreateAnInspection extends BaseClass {
     public WebElement getDateOfVisit(){return ehandler.findClickable(dateOfVisit);}
     public WebElement getInspectionDescription(){return ehandler.findClickable(inspectionDescription);}
     public WebElement getSaveInspection(){return ehandler.findClickable(saveInspection);}
+    public WebElement getToastMessage(){return ehandler.findE(toastMessage);}
+
 
 }

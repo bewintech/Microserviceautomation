@@ -1,15 +1,20 @@
 package Tests.demandLetterManagementTests;
 
 import Tests.LoginTest;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.systech.compliance.base.BaseClass;
 import org.systech.compliance.pageobjects.demandLetterManagement.CertifySDL;
+import org.systech.compliance.utils.AssertionMethod;
 import org.testng.annotations.Test;
 
 /**
  * @author Winfred
  */
 public class CertifySDLTest extends BaseClass {
-    @Test(priority = 9)
+    @Test(priority = 9, description = "Process of certifying and Aprroving SDL")
+    @Severity(SeverityLevel.CRITICAL)
+
     public void certifySDL() throws InterruptedException{
         driver.get(prop.getProperty("url"));
 
@@ -28,6 +33,10 @@ public class CertifySDLTest extends BaseClass {
         certifySDL.getApproveSDL().click();
         certifySDL.getApproveSDLBatch().click();
         Thread.sleep(2000);
+        String expectedMessage = "Success!";
+        AssertionMethod assertionMethod = new AssertionMethod();
+        assertionMethod.assertToastMessage(driver, expectedMessage);
+
 
 
     }

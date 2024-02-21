@@ -43,6 +43,7 @@ public class BaseClass {
     public static Faker faker = new Faker();
     public static Methods methods=new Methods();
     public static String result;
+
     @BeforeSuite
     public void setUp() throws IOException, InterruptedException {
 

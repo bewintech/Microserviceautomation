@@ -1,17 +1,21 @@
 package Tests.InterestandPenaltyManagementTests;
 
 import Tests.LoginTest;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.systech.compliance.actions.ActionFile;
 import org.systech.compliance.base.BaseClass;
 import org.systech.compliance.pageobjects.InterestandPenaltyManagement.CalculateInterestRates;
 import org.systech.compliance.pageobjects.InterestandPenaltyManagement.IssueSDL;
+import org.systech.compliance.utils.AssertionMethod;
 import org.testng.annotations.Test;
 
 /**
  * @author Winfred
  */
 public class IssueSDLTest extends BaseClass {
-    @Test(priority = 8)
+    @Test(priority = 8, description = "Process of Issuing SDL")
+    @Severity(SeverityLevel.CRITICAL)
     public void issueSDL() throws InterruptedException{
         driver.get(prop.getProperty("url"));
 
@@ -29,6 +33,10 @@ public class IssueSDLTest extends BaseClass {
 
         issueSDL.getGenerateSDL().click();
         Thread.sleep(2000);
+        String expectedMessage = "Success";
+        AssertionMethod assertionMethod = new AssertionMethod();
+        assertionMethod.assertToastMessage(driver, expectedMessage);
+
 
 
     }

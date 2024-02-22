@@ -15,6 +15,8 @@ import org.systech.compliance.actions.ActionFile;
 import org.systech.compliance.base.BaseClass;
 import org.systech.compliance.pageobjects.inspections.CreateAnInspection;
 import org.systech.compliance.utils.AssertionMethod;
+import org.systech.compliance.utils.ScreenShotMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -22,6 +24,7 @@ import java.time.Duration;
 import static org.testng.Assert.assertTrue;
 
 public class CreateAnInspectionTest extends BaseClass {
+
 
     @Test(priority = 1,  description = "Testing the Process of Creating an inspection")
     @Severity(SeverityLevel.CRITICAL)

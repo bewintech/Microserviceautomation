@@ -88,33 +88,8 @@ public class BaseClass {
     }
 
 
-
-//   @BeforeClass
-//    @Test(dataProvider = "login", dataProviderClass = ReadXlsxData .class, priority = 0)
-
-//    public void login(String uname, String password) throws InterruptedException {
-//        driver.get(prop.getProperty("url"));
-//        LoginPage loginPage = new LoginPage(driver);
-//        loginPage.myuserName().sendKeys(uname);
-//        loginPage.myPasswordMethod().sendKeys(password);
-//
-//        loginPage.myLoginButton().click();
-//
-//    }
-//    public void loadUrl(){
-//        try{
-////            driver.get("http://localhost:8080/Xe/");
-//            driver.get(prop.getProperty("url"));
-//            System.out.println(prop.getProperty("url"));
-//
-//        }catch(Exception e){
-//            logger.error(e.getMessage());
-//        }
-//    }
-
-
-//    @AfterSuite
-//    public void tearDown() {
-//      driver.quit();
-//    }
+    @AfterSuite
+    public void tearDown() {
+      driver.quit();
+    }
 }

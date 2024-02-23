@@ -22,6 +22,7 @@ public class CertifyPaymentPlan extends BaseClass {;
     WebElement approve;
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Yes')]")
     WebElement confirmApproval;
+
     public CertifyPaymentPlan(WebDriver driver){
         PageFactory.initElements(driver,this);}
     public WebElement getSelectPayment(){return ehandler.findClickable(selectPayment);}

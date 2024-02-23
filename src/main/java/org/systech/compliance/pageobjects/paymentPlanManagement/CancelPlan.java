@@ -16,10 +16,15 @@ public class CancelPlan extends BaseClass {
     WebElement cancelPlan;
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Yes')]")
     WebElement confirmCancel;
+    @FindBy(xpath = "(//span[contains(.,'Remove')])[6]")
+    WebElement removePlan;
     public CancelPlan(WebDriver driver){
         PageFactory.initElements(driver,this);}
     public WebElement getCancelPlan(){return ehandler.findClickable(cancelPlan);}
     public WebElement getConfirmCancel(){return ehandler.findClickable(confirmCancel);}
     public WebElement getSelectPayment(){return ehandler.findClickable(selectPayment);}
+    public WebElement getRemovePlan(){return ehandler.findClickable(removePlan);}
+
+
 
 }

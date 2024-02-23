@@ -16,7 +16,8 @@
 <!--            <class name="Tests.demandLetterManagementTests.GenerateHDLTest"></class>-->
 <!--            <class name="Tests.demandLetterManagementTests.CertifyHDLTest"></class>-->
 <!--            <class name="tests.employersManagement.generateComplianceCertTest"></class>-->
-            <class name="Tests.paymentPlanManagementTests.NewPaymentPlanTest"></class>
+<!--            <class name="Tests.paymentPlanManagementTests.NewPaymentPlanTest"></class>-->
+            <class name="Tests.paymentPlanManagementTests.CertifyPaymentPlanTest"></class>
 
             <!-- Add more classes as needed -->
         </classes>

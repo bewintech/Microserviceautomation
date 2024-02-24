@@ -1,4 +1,4 @@
-package tests.employersManagement;
+package Tests.employersManagement;
 
 import Tests.LoginTest;
 import org.openqa.selenium.WebDriver;

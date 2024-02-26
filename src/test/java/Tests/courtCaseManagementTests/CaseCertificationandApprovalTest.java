@@ -36,7 +36,7 @@ public class CaseCertificationandApprovalTest extends BaseClass {
         approveCourtCase.getSelectCase().click();
         approveCourtCase.getCasecertification().click();
         approveCourtCase.getAppoveCase().click();
-        approveCourtCase.getConfirtApproval().click();
+        approveCourtCase.getConfirmApproval().click();
         // Assertion
         String expectedMessage = "Success";
         AssertionMethod assertionMethod = new AssertionMethod();

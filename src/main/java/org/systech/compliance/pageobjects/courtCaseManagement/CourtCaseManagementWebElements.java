@@ -63,7 +63,7 @@ public class CourtCaseManagementWebElements extends BaseClass {
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Save Case')]")
     WebElement saveCase;
     // Webelements for case approval
-    @FindBy(xpath = "(//div[contains(@class,'x-grid-cell-inner x-grid-checkcolumn-cell-inner')])[9]")
+    @FindBy(xpath = "(//div[contains(@class,'x-grid-cell-inner x-grid-checkcolumn-cell-inner')])[6]")
     WebElement selectCase;
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Certification')]")
     WebElement casecertification;
@@ -80,6 +80,11 @@ public class CourtCaseManagementWebElements extends BaseClass {
     WebElement caseToRemove;
     @FindBy(xpath = "//b[contains(.,'Remove Case')]")
     WebElement removeCase;
+// Webelements for Case Deactivation
+    @FindBy(xpath = "(//div[contains(@class,'x-grid-cell-inner x-grid-checkcolumn-cell-inner')])[4]")
+    WebElement selectCaseToDeactivate;
+    @FindBy(xpath = "//b[contains(.,'Deactivate Case')]")
+    WebElement deactivateCase;
 
 
     public CourtCaseManagementWebElements(WebDriver driver){
@@ -119,6 +124,8 @@ public class CourtCaseManagementWebElements extends BaseClass {
     public WebElement getConfirmApproval(){return ehandler.findClickable(confirmApproval);}
     public WebElement getCaseToRemove(){return ehandler.findClickable(caseToRemove);}
     public WebElement getRemoveCase(){return ehandler.findClickable(removeCase);}
+    public WebElement getSelectCaseToDeactivate(){return ehandler.findClickable(selectCaseToDeactivate);}
+    public WebElement getDeactivateCase(){return ehandler.findClickable(deactivateCase);}
 
 
 

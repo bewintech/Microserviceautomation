@@ -24,8 +24,9 @@
 <!--            <class name="Tests.paymentPlanManagementTests.CancelPlanTest"></class>-->
 <!--            <class name="Tests.courtCaseManagementTests.NewCaseTest"></class>-->
 <!--            <class name="Tests.courtCaseManagementTests.CaseCertificationandApprovalTest"></class>-->
-            <class name="Tests.courtCaseManagementTests.RemoveCaseTest"></class>
-
+<!--            <class name="Tests.courtCaseManagementTests.RemoveCaseTest"></class>-->
+            <class name="Tests.courtCaseManagementTests.DeactivateCourtCaseTest"></class>
+<!---->
             <!-- Add more classes as needed -->
         </classes>
     </test>

@@ -47,6 +47,7 @@ public class NewCaseTest extends BaseClass {
         String expectedMessage = "Success!";
         AssertionMethod assertionMethod = new AssertionMethod();
         assertionMethod.assertToastMessage(driver, expectedMessage);
+        refreshBrowser();
 
 
 

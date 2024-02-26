@@ -10,24 +10,19 @@ import org.testng.annotations.Test;
 /**
  * @author Winfred
  */
-public class RemoveCaseTest extends BaseClass {
-    @Test(priority = 21, description = "Process of Removing a Court Case")
+public class DeactivateCourtCaseTest extends BaseClass {
+    @Test(priority = 22, description = "Process of Deactivating a Court Case")
     @Severity(SeverityLevel.CRITICAL)
-    public void removeCourtCase() throws InterruptedException{
-        CourtCaseManagementWebElements removeCase = new CourtCaseManagementWebElements(driver);
-        removeCase.getCourtCaseManagement().click();
-        removeCase.getCaseToRemove().click();
-        removeCase.getOperations().click();
-        removeCase.getRemoveCase().click();
-        // Assertion
-        String expectedMessage = "Success";
+    public void deactivateCourtCase() throws InterruptedException{
+        CourtCaseManagementWebElements deactivateCase = new CourtCaseManagementWebElements(driver);
+        deactivateCase.getCourtCaseManagement().click();
+        deactivateCase.getSelectCaseToDeactivate().click();
+        deactivateCase.getOperations().click();
+        deactivateCase.getDeactivateCase().click();
+        String expectedMessage = "Deactivation Success!";
         AssertionMethod assertionMethod = new AssertionMethod();
         assertionMethod.assertToastMessage(driver, expectedMessage);
         refreshBrowser();
-
-
-
-
     }
 
 }

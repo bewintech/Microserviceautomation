@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class WaitWebElement extends BaseClass {
 
-    private static final Duration TIMEOUT = Duration.ofSeconds(60);
+    private static final Duration TIMEOUT = Duration.ofSeconds(30);
 
     public WaitWebElement(WebDriver driver) {
         PageFactory.initElements(driver, this);

@@ -21,11 +21,11 @@ import java.time.Duration;
  */
 public class ComputePenaltyTests extends BaseClass {
 
-    @Test(priority = 7, description = "Process of computing penalty")
+    @Test(priority = 9, description = "Process of computing penalty")
     @Severity(SeverityLevel.CRITICAL)
 
     public void computePenalty() throws InterruptedException {
-        driver.get(prop.getProperty("url"));
+//        driver.get(prop.getProperty("url"));
         CloseInspection closeInspection = new CloseInspection(driver);
         ComputePenalty computePenalty = new ComputePenalty(driver);
         computePenalty.getInterestManagement().click();
@@ -39,6 +39,7 @@ public class ComputePenaltyTests extends BaseClass {
         String expectedMessage = "Success";
         AssertionMethod assertionMethod = new AssertionMethod();
         assertionMethod.assertToastMessage(driver, expectedMessage);
+        refreshBrowser();
 
 
 

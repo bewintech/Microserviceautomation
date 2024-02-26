@@ -12,11 +12,11 @@ import org.testng.annotations.Test;
  * @author Winfred
  */
 public class GenerateHDLTest extends BaseClass {
-    @Test(priority = 11, description = "Process of generating harsh demand letter")
+    @Test(priority = 12, description = "Process of generating harsh demand letter")
     @Severity(SeverityLevel.CRITICAL)
 
     public void generateHDL() throws InterruptedException{
-        driver.get(prop.getProperty("url"));
+//        driver.get(prop.getProperty("url"));
 
         CertifySDL certifySDL = new CertifySDL(driver);
         GenerateHDL generateHDL = new GenerateHDL(driver);
@@ -29,6 +29,7 @@ public class GenerateHDLTest extends BaseClass {
         String expectedMessage = "Success!";
         AssertionMethod assertionMethod = new AssertionMethod();
         assertionMethod.assertToastMessage(driver, expectedMessage);
+        refreshBrowser();
 
 
 

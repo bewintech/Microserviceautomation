@@ -24,7 +24,7 @@ public class NewPaymentPlanTest extends BaseClass {
         newPaymentPlan.getEmployer().click();
         newPaymentPlan.getApplySelected().click();
         newPaymentPlan.getTotalLiability().sendKeys("100000");
-        newPaymentPlan.getStartDate().sendKeys("02/22/2024");
+        newPaymentPlan.getStartDate().sendKeys(actions.generateDateToday());
         newPaymentPlan.getPeriodFrom().sendKeys("11/20/2023");
         newPaymentPlan.getPeriodTo().sendKeys("11/30/2023");
         actions.comboDropDown(newPaymentPlan.getFrequency(),"Monthly");

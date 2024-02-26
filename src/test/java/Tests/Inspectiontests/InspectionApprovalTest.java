@@ -24,8 +24,8 @@ public class InspectionApprovalTest extends BaseClass {
     @Test(priority = 2, description = "Process of certifying and approving an inspection")
     @Severity(SeverityLevel.CRITICAL)
 
-    public void inspectionApprovalTest() throws InterruptedException {
-        driver.get(prop.getProperty("url"));
+    public void inspectionCertifyTest() throws InterruptedException {
+//        driver.get(prop.getProperty("url"));
         CloseInspection closeInspection = new CloseInspection(driver);
         InspectionApproval inspectionApproval = new InspectionApproval(driver);
         inspectionApproval.getInspectionManagement().click();
@@ -33,11 +33,22 @@ public class InspectionApprovalTest extends BaseClass {
         inspectionApproval.getCertification().click();
         inspectionApproval.getCertifyInspection().click();
         inspectionApproval.getCertify().click();
-        Thread.sleep(20000);
+        String expectedMessage = "Success";
+        AssertionMethod assertionMethod = new AssertionMethod();
+        assertionMethod.assertToastMessage(driver, expectedMessage);
+
+        refreshBrowser();
+    }
+     @Test(priority = 3, description = "Process of  approving an inspection")
+     @Severity(SeverityLevel.CRITICAL)
+             public void inspectionApproval() throws InterruptedException{
+         InspectionApproval inspectionApproval = new InspectionApproval(driver);
+         inspectionApproval.getInspectionManagement().click();
+         inspectionApproval.getSelectInspection().click();
         inspectionApproval.getCertification().click();
         inspectionApproval.getApproveInspection().click();
-        inspectionApproval.getCertify().click();
-        Thread.sleep(6000);
+        inspectionApproval.getConfirmApproval().click();
+
 
 
         String expectedMessage = "Success";
@@ -45,7 +56,6 @@ public class InspectionApprovalTest extends BaseClass {
         assertionMethod.assertToastMessage(driver, expectedMessage);
 
 
-        refreshBrowser();
 
     }
 

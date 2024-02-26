@@ -12,11 +12,11 @@ import org.testng.annotations.Test;
  * @author Winfred
  */
 public class CertifySDLTest extends BaseClass {
-    @Test(priority = 9, description = "Process of certifying and Aprroving SDL")
+    @Test(priority = 11, description = "Process of certifying and Aprroving SDL")
     @Severity(SeverityLevel.CRITICAL)
 
     public void certifySDL() throws InterruptedException{
-        driver.get(prop.getProperty("url"));
+//        driver.get(prop.getProperty("url"));
 
         CertifySDL certifySDL = new CertifySDL(driver);
         certifySDL.getDemandLettersManagement().click();
@@ -36,6 +36,7 @@ public class CertifySDLTest extends BaseClass {
         String expectedMessage = "Success!";
         AssertionMethod assertionMethod = new AssertionMethod();
         assertionMethod.assertToastMessage(driver, expectedMessage);
+        refreshBrowser();
 
 
 

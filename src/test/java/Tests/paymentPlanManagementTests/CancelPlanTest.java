@@ -25,6 +25,7 @@ public class CancelPlanTest extends BaseClass {
         String expectedMessage = "Success";
         AssertionMethod assertionMethod = new AssertionMethod();
         assertionMethod.assertToastMessage(driver, expectedMessage);
+        refreshBrowser();
     }
 
         @Test(priority = 17, description = "Process of removing a Payment Plan")

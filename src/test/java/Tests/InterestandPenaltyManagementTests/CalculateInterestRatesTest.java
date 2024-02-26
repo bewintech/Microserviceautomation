@@ -21,11 +21,11 @@ import java.time.Duration;
  */
 public class CalculateInterestRatesTest extends BaseClass {
 
-    @Test(priority = 6, description = "Process of Calculating Interest Rates")
+    @Test(priority = 7, description = "Process of Calculating Interest Rates")
     @Severity(SeverityLevel.CRITICAL)
 
     public void interestCalculation() throws InterruptedException{
-        driver.get(prop.getProperty("url"));
+//        driver.get(prop.getProperty("url"));
         CloseInspection closeInspection = new CloseInspection(driver);
         CalculateInterestRates interestCalculation = new CalculateInterestRates(driver);
         ActionFile actions = new ActionFile();
@@ -44,6 +44,7 @@ public class CalculateInterestRatesTest extends BaseClass {
         String expectedMessage = "Success";
         AssertionMethod assertionMethod = new AssertionMethod();
         assertionMethod.assertToastMessage(driver, expectedMessage);
+        refreshBrowser();
 
 
 

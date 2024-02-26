@@ -3,12 +3,18 @@ package Tests.courtCaseManagementTests;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.systech.compliance.base.BaseClass;
+import org.systech.compliance.pageobjects.courtCaseManagement.CourtCaseManagementWebElements;
 import org.testng.annotations.Test;
 
 /**
  * @author Winfred
  */
-public class removeCaseTest extends BaseClass {
-    @Test(priority = 20, description = "Process of Removing a Court Case")
+public class RemoveCaseTest extends BaseClass {
+    @Test(priority = 21, description = "Process of Removing a Court Case")
     @Severity(SeverityLevel.CRITICAL)
+    public void removeCourtCase() throws InterruptedException{
+        CourtCaseManagementWebElements removeCase = new CourtCaseManagementWebElements(driver);
+
+    }
+
 }

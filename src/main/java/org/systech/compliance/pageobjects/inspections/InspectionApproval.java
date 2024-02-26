@@ -22,6 +22,8 @@ public class InspectionApproval extends BaseClass {
     WebElement certify;
     @FindBy(xpath = "//b[contains(.,'Approve')]")
     WebElement approveInspection;
+    @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Yes')]")
+    WebElement confirmApproval;
     public InspectionApproval(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
@@ -32,6 +34,7 @@ public class InspectionApproval extends BaseClass {
     public WebElement getCertifyInspection(){return ehandler.findClickable(certifyInspection);}
     public WebElement getApproveInspection(){return ehandler.findClickable(approveInspection);}
     public WebElement getCertify(){return ehandler.findClickable(certify);}
+    public WebElement getConfirmApproval(){return ehandler.findClickable(confirmApproval);}
 
 
 }

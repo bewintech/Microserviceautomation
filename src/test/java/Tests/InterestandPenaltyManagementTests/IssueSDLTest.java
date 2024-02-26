@@ -17,7 +17,7 @@ public class IssueSDLTest extends BaseClass {
     @Test(priority = 8, description = "Process of Issuing SDL")
     @Severity(SeverityLevel.CRITICAL)
     public void issueSDL() throws InterruptedException{
-        driver.get(prop.getProperty("url"));
+//        driver.get(prop.getProperty("url"));
 
         IssueSDL issueSDL = new IssueSDL(driver);
         CalculateInterestRates rates = new CalculateInterestRates(driver);
@@ -36,6 +36,7 @@ public class IssueSDLTest extends BaseClass {
         String expectedMessage = "Success";
         AssertionMethod assertionMethod = new AssertionMethod();
         assertionMethod.assertToastMessage(driver, expectedMessage);
+        refreshBrowser();
 
 
 

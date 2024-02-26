@@ -10,7 +10,7 @@ import org.systech.compliance.base.BaseClass;
  * @author Winfred
  */
 public class CertifyPaymentPlan extends BaseClass {;
-    @FindBy(xpath = "(//div[contains(@class,'x-grid-cell-inner x-grid-checkcolumn-cell-inner')])[11]")
+    @FindBy(xpath = "(//div[contains(@class,'x-grid-cell-inner x-grid-checkcolumn-cell-inner')])[8]")
     WebElement selectPayment;
     @FindBy(xpath = "(//span[@data-ref='btnInnerEl'][contains(.,'Certification')])[1]")
     WebElement cetification;

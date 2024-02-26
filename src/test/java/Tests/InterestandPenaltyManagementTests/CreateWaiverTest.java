@@ -12,11 +12,11 @@ import org.testng.annotations.Test;
  * @author Winfred
  */
 public class CreateWaiverTest extends BaseClass {
-    @Test (priority = 9, description = "Process of creating waiver rates")
+    @Test (priority = 10, description = "Process of creating waiver rates")
     @Severity(SeverityLevel.CRITICAL)
 
     public void createWaiverTest() throws InterruptedException{
-        driver.get(prop.getProperty("url"));
+//        driver.get(prop.getProperty("url"));
 
         CreateWaiverRate  createWaiverRate = new CreateWaiverRate(driver);
         ActionFile actions = new ActionFile();
@@ -34,6 +34,7 @@ public class CreateWaiverTest extends BaseClass {
         String expectedMessage = "Success!";
         AssertionMethod assertionMethod = new AssertionMethod();
         assertionMethod.assertToastMessage(driver, expectedMessage);
+        refreshBrowser();
 
 
 

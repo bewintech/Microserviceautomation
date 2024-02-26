@@ -54,7 +54,7 @@ public class CourtCaseManagementWebElements extends BaseClass {
     WebElement caseStatus;
     @FindBy(xpath = "(//span[@data-ref='btnInnerEl'][contains(.,'Find')])[3]")
     WebElement findCaseType;
-    @FindBy(xpath = "(//div[contains(@class,'x-grid-cell-inner x-grid-checkcolumn-cell-inner')])[13]")
+    @FindBy(xpath = "(//div[contains(@class,'x-grid-cell-inner x-grid-checkcolumn-cell-inner')])[15]")
     WebElement selectCaseType;
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Apply Selected')]")
     WebElement applySelectedCasetype;
@@ -62,6 +62,24 @@ public class CourtCaseManagementWebElements extends BaseClass {
     WebElement courtOrder;
     @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Save Case')]")
     WebElement saveCase;
+    // Webelements for case approval
+    @FindBy(xpath = "(//div[contains(@class,'x-grid-cell-inner x-grid-checkcolumn-cell-inner')])[9]")
+    WebElement selectCase;
+    @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Certification')]")
+    WebElement casecertification;
+    @FindBy(xpath = "//a[@data-ref='itemEl'][contains(.,'Certify')]")
+    WebElement certifyCase;
+    @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Yes')]")
+    WebElement confirmCertification;
+    @FindBy(xpath = "//b[contains(.,'Approve')]")
+    WebElement appoveCase;
+    @FindBy(xpath = "//span[@data-ref='btnInnerEl'][contains(.,'Yes')]")
+    WebElement confirmApproval;
+//    Webelements for Case Removal
+    @FindBy(xpath = "//b[contains(.,'Remove Case')]")
+    WebElement removeCase;
+
+
     public CourtCaseManagementWebElements(WebDriver driver){
         PageFactory.initElements(driver,this);}
     public WebElement getCourtCaseManagement(){return ehandler.findClickable(courtCaseManagement);}
@@ -90,6 +108,14 @@ public class CourtCaseManagementWebElements extends BaseClass {
     public WebElement getApplySelectedCasetype(){return ehandler.findClickable(applySelectedCasetype);}
     public WebElement getToDate(){return ehandler.findClickable(toDate);}
     public WebElement getSaveCase(){return ehandler.findClickable(saveCase);}
+
+    public WebElement getCasecertification(){return ehandler.findClickable(casecertification);}
+    public WebElement getSelectCase(){return ehandler.findClickable(selectCase);}
+    public WebElement getConfirmCertification(){return ehandler.findClickable(confirmCertification);}
+    public WebElement getCertifyCase(){return ehandler.findClickable(certifyCase);}
+    public WebElement getAppoveCase(){return ehandler.findClickable(appoveCase);}
+    public WebElement getConfirtApproval(){return ehandler.findClickable(confirmApproval);}
+
 
 
 

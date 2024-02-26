@@ -14,8 +14,8 @@ public class CertifyHDLTest extends BaseClass {
     @Test(priority = 13, description = "Process of Certifyng and Approving HDL")
     @Severity(SeverityLevel.CRITICAL)
 
-    public void certifyHDL() throws InterruptedException{
-        driver.get(prop.getProperty("url"));
+    public void certifyHDL() throws InterruptedException {
+//        driver.get(prop.getProperty("url"));
 
         CertifyHDL certifyHDL = new CertifyHDL(driver);
         certifyHDL.getDemandLetterManagement().click();
@@ -25,7 +25,20 @@ public class CertifyHDLTest extends BaseClass {
         certifyHDL.getCertify().click();
         certifyHDL.getConfirmCertification().click();
         certifyHDL.getCertifyHDL().click();
+        String expectedMessage = "Success!";
+        AssertionMethod assertionMethod = new AssertionMethod();
+        assertionMethod.assertToastMessage(driver, expectedMessage);
+        refreshBrowser();
+
+    }
+    @Test(priority = 14, description = "Process of Approving HDL")
+    @Severity(SeverityLevel.CRITICAL)
+    public void approveHDL() throws InterruptedException{
         Thread.sleep(4000);
+        CertifyHDL certifyHDL = new CertifyHDL(driver);
+        certifyHDL.getDemandLetterManagement().click();
+        certifyHDL.gethDL().click();
+        certifyHDL.getSelectHDL().click();
         certifyHDL.getCertification().click();
         certifyHDL.getApprove().click();
         certifyHDL.getConfirmApproval().click();
